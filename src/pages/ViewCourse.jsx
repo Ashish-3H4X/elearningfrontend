@@ -36,7 +36,7 @@ function ViewCourse() {
     try {
       const result = await axios.post(serverUrl + "/api/review/givereview" , {rating , comment , courseId} , {withCredentials:true})
       toast.success("Review Added")
-      console.log(result.data)
+      // console.log(result.data)
       setRating(0)
       setComment("")
 
@@ -56,7 +56,7 @@ function ViewCourse() {
 
 // Usage:
 const avgRating = calculateAverageRating(selectedCourseData?.reviews);
-console.log("Average Rating:", avgRating);
+// console.log("Average Rating:", avgRating);
 
   
 
@@ -64,7 +64,7 @@ console.log("Average Rating:", avgRating);
     courseData.map((item) => {
       if (item._id === courseId) {
       dispatch(setSelectedCourseData(item))
-        console.log(selectedCourseData)
+        // console.log(selectedCourseData)
       
 
         return null;
@@ -79,7 +79,7 @@ console.log("Average Rating:", avgRating);
     return enrolledId?.toString() === courseId?.toString();
   });
 
-  console.log("Enrollment verified:", verify);
+  // console.log("Enrollment verified:", verify);
   if (verify) {
     setIsEnrolled(true);
   }
@@ -101,7 +101,7 @@ console.log("Average Rating:", avgRating);
             { withCredentials: true }
           );
           setCreatorData(result.data);
-          console.log(result.data)
+          // console.log(result.data)
         } catch (error) {
           console.error("Error fetching creator:", error);
         }
@@ -136,7 +136,7 @@ const handleEnroll = async (courseId, userId) => {
       courseId,
       userId
     } , {withCredentials:true});
-    console.log(orderData)
+    // console.log(orderData)
 
     const options = {
       key: import.meta.env.VITE_RAZORPAY_KEY_ID, // from .env

@@ -28,7 +28,7 @@ function EditLecture() {
       setLoading(true)
       try {
         const result = await axios.post(serverUrl + `/api/course/editlecture/${lectureId}` , formData , {withCredentials:true})
-        console.log(result.data)
+        // console.log(result.data)
         dispatch(setLectureData([...lectureData,result.data]))
         toast.success("Lecture Updated")
         navigate("/courses")
@@ -44,7 +44,7 @@ function EditLecture() {
       setLoading1(true)
       try {
         const result = await axios.delete(serverUrl + `/api/course/removelecture/${lectureId}` , {withCredentials:true})
-        console.log(result.data)
+        // console.log(result.data)
         toast.success("Lecture Removed")
        navigate(`/createlecture/${courseId}`)
         setLoading1(false)
