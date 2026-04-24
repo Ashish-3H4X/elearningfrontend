@@ -150,26 +150,6 @@ function Nav() {
         </span>}
       </div>
 
-      {/* 🔥 GRADIENT STYLE */}
-      <style>
-      {`
-      .gradient-text {
-        background: linear-gradient(270deg, #FF6F00, #FFCA28, #00C853, #00B0FF, #8E24AA);
-        background-size: 1000% 1000%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: gradientMove 6s ease infinite;
-        text-shadow: 0 0 8px rgba(255, 200, 0, 0.4),
-                     0 0 16px rgba(0, 200, 255, 0.3);
-      }
-
-      @keyframes gradientMove {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-      `}
-      </style>
 
     </div>
   )
