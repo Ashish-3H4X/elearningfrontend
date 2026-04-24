@@ -39,7 +39,7 @@ function Nav() {
           className='lg:w-[20%] w-[40%] lg:pl-[50px] cursor-pointer flex items-center'
           onClick={()=>navigate("/")}
         >
-          <h1 className='text-[22px] lg:text-[26px] font-bold tracking-wide gradient-text'>
+          <h1 className='text-[22px] lg:text-[26px] text-white font-bold tracking-wide gradient-text'>
             Virtual Learning
           </h1>
         </div>
